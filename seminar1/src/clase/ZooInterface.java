@@ -4,7 +4,7 @@ public interface ZooInterface {
 
 	
 	public void feedAllAnimals();
-	public void addAnimal(Animal a);
+	public void AdaugaAnimal(Animal a);
 
 	
 }

@@ -15,16 +15,16 @@ public class Program {
 		zoo.AdaugaAnimal(g1);
 		zoo.AdaugaAnimal(g2);
 		
-		zoo.feedAnimals();
+		zoo.feedAllAnimals();
 		
 		
 		Zebra z1 = new Zebra("z1");
-		Zebra z2 = new Zebra("z2");
+		Zebra z2 = new Zebra("z2",3);
 		
 		zoo.AdaugaAnimal(z1);
 		zoo.AdaugaAnimal(z2);
 		
-		zoo.feedAnimals();
+		zoo.feedAllAnimals();
 		
 	}
 
