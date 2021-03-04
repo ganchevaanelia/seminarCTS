@@ -5,7 +5,15 @@ import java.util.List;
 
 import ro.ase.cts.clase.Aplicant;
 
-public interface IReader {
+public abstract class IReader {
 
-	public List<Aplicant> readAplicants(String file) throws FileNotFoundException, NumberFormatException;
+    protected String filePath;  
+
+    public IReader(String filePath) {
+        this.filePath = filePath;
+    }
+
+    
+    public abstract List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException;
+
 }

@@ -9,17 +9,15 @@ import ro.ase.cts.clase.readers.AngajatiReader;
 import ro.ase.cts.clase.readers.IReader;
 
 public class Program {
-	
-	public static List<Aplicant> citesteAplicanti(String numeFisier,
-			IReader readAplicant) throws NumberFormatException, FileNotFoundException {
-		return readAplicant.readAplicants(numeFisier);
+
+	public static List<Aplicant> citesteAplicanti( IReader reader) throws FileNotFoundException {
+		return reader.readAplicants();
 	}
 
 	public static void main(String[] args) {
 		List<Aplicant> listaAplicanti;
 		try {
-			listaAplicanti = citesteAplicanti("angajati.txt",
-					new AngajatiReader());
+			listaAplicanti = citesteAplicanti(new AngajatiReader("angajati.txt"));
 			for(Aplicant aplicant:listaAplicanti)
 				System.out.println(aplicant.toString());
 		} catch (FileNotFoundException e) {
@@ -29,3 +27,4 @@ public class Program {
 	}
 
 }
+
