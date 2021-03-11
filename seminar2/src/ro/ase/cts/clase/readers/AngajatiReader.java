@@ -22,7 +22,7 @@ public class AngajatiReader extends IReader {
 		while (input2.hasNext()) {
 			Angajat angajat = new Angajat();
 			super.citireAplicant(input2, angajat);
-			
+
 			int salariu = input2.nextInt();
 			String ocupatie = input2.next();
 			angajat.setSalariu(salariu);
