@@ -16,22 +16,22 @@ public class EleviReader extends IReader {
 	}
 
 	public List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
-		Scanner input2 = new Scanner(new File(super.filePath));
-		input2.useDelimiter(",|\n");
+		Scanner inputFisier = new Scanner(new File(super.filePath));
+		inputFisier.useDelimiter(",|\n");
 		List<Aplicant> elevi = new ArrayList<>();
 
-		while (input2.hasNext()) {
+		while (inputFisier.hasNext()) {
 			Elev elev = new Elev();
-			super.citireAplicant(input2, elev);
+			super.citireAplicant(inputFisier, elev);
 
-			int clasa = input2.nextInt();
-			String tutore = input2.next();
+			int clasa = inputFisier.nextInt();
+			String tutore = inputFisier.next();
 			elev.setClasa(clasa);
 			elev.setTutore(tutore);
 			elevi.add(elev);
 		}
 
-		input2.close();
+		inputFisier.close();
 		return elevi;
 	}
 }

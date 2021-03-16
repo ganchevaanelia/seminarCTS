@@ -15,21 +15,21 @@ public class AngajatiReader extends IReader {
 	}
 
 	public List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
-		Scanner input2 = new Scanner(new File(super.filePath));
-		input2.useDelimiter(",");
+		Scanner inputFisier = new Scanner(new File(super.filePath));
+		inputFisier.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<>();
 
-		while (input2.hasNext()) {
+		while (inputFisier.hasNext()) {
 			Angajat angajat = new Angajat();
-			super.citireAplicant(input2, angajat);
+			super.citireAplicant(inputFisier, angajat);
 
-			int salariu = input2.nextInt();
-			String ocupatie = input2.next();
+			int salariu = inputFisier.nextInt();
+			String ocupatie = inputFisier.next();
 			angajat.setSalariu(salariu);
 			angajat.setOcupatie(ocupatie);
 			angajati.add(angajat);
 		}
-		input2.close();
+		inputFisier.close();
 		return angajati;
 	}
 }

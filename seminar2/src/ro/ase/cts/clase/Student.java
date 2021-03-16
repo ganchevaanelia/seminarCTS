@@ -1,22 +1,12 @@
 package ro.ase.cts.clase;
 
-import java.util.Arrays;
-
 public class Student extends Aplicant {
 	protected String facultate;
 	protected int an_studii;
 	private static float sumaFinantare = 20;
 
-	public String getFacultate() {
-		return facultate;
-	}
-
 	public void setFacultate(String facultate) {
 		this.facultate = facultate;
-	}
-
-	public int getAn_studii() {
-		return an_studii;
 	}
 
 	public void setAn_studii(int an_studii) {
@@ -29,10 +19,6 @@ public class Student extends Aplicant {
 
 	public static float getSumaFinantare() {
 		return sumaFinantare;
-	}
-
-	public static void setSumaFinantare(float sumaFinantare) {
-		Student.sumaFinantare = sumaFinantare;
 	}
 
 	public Student() {
