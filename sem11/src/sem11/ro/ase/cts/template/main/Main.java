@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		SpectatorAbstract spectator = new Spectator("Ion");
-		SpectatorAbstract spectatorVIP = new SpectatorVIP("Maria");
+		SpectatorAbstract spectatorVIP = new SpectatorVIP("Marius");
 
 		spectator.intrareInStadion();
 		spectatorVIP.intrareInStadion();
