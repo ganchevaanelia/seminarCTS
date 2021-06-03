@@ -3,8 +3,11 @@ package ro.ase.cts.teste;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import ro.ase.cts.clase.*;
+import ro.ase.cts.teste.categorii.GetPromovabilitateCategory;
+import ro.ase.cts.teste.categorii.TesteUrgenteCategory;
 import ro.ase.cts.teste.mockuri.*;
 
 public class TesteGrupaMock {
@@ -19,7 +22,8 @@ public class TesteGrupaMock {
 	}
 
 	@Test
-	public void testGetPromovabilitate() {
+	@Category(GetPromovabilitateCategory.class)
+	public void testGetPromovabilitateStop() {
 		// boundary superior
 		IStudent student = new Student();
 		Grupa grupa = new Grupa(1081);
@@ -29,6 +33,7 @@ public class TesteGrupaMock {
 	}
 
 	@Test
+	@Category({GetPromovabilitateCategory.class, TesteUrgenteCategory.class})
 	public void testGetPronovabilitateFake() { //right
 		Grupa grupa = new Grupa(1081);
 		for(int i=0; i<8; i++)
